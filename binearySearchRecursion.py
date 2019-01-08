@@ -9,7 +9,7 @@ class BinearySearch:
             print "Target found at index: ", res
 
     def helper(self, arr, start, end, target):
-        if start > end:
+        if start >= end:
             return
         mid = (start + end)/2
         elem = arr[mid]
@@ -23,5 +23,5 @@ class BinearySearch:
             return self.helper(arr, start, end, target)
 
 test = BinearySearch()
-arr = [1,2,3,4,5,6,7,8,9]
+arr = [1,2,3,4,5,7,8,9]
 test.search(arr, 5)
